@@ -1,31 +1,30 @@
-# Semana 6
+# Entregable 1
 
-## Ejemplo entregable 1
+## Consigna:
 
-Para correr el script de ejemplo `EjemploEntregable1.ipynb` se debe ejecutar el docker-compose que contiene el contenedor de Pyspark con Jupyter Notebook.
+Script que extraiga datos de una API pública y crear la tabla en Redshift para posterior carga de sus datos.
 
+### Objetivos generales
 
-## Docker Compose con Pyspark
+✓ Tener un código inicial que será usado
+en el proyecto final como un script ETL
+inicial.
 
-```bash
-docker-compose -f ./Semana_6/docker-compose.yml up --build
-```
+### Objetivos específicos
 
-> Password o Token del Jupyter Notebook: `coder`
+✓ El script debería extraer datos en JSON
+y poder leer el formato en un
+diccionario de Python.
 
-> URL del Jupyter Notebook: [http://localhost:8888/lab?token=coder](http://localhost:8888/lab?token=coder)
+✓ La entrega involucra la creación de una
+versión inicial de la tabla donde los
+datos serán cargados posteriormente.
 
-## Arhcivo con claves Redshift
+Esto lo vamos a llevar a cabo usando `requests`, `Spark` y un driver de conexión de `Postgres`
 
-Crear un archivo llamado `.env` con las siguientes claves:
+Para correr el script de ejemplo Entregable1.ipynb se debe ejecutar el docker-compose que contiene el contenedor de Pyspark con Jupyter Notebook.
 
-```bash
-AWS_REDSHIFT_USER=your-user
-AWS_REDSHIFT_PASSWORD=your-password
-AWS_REDSHIFT_HOST=data-engineer-cluster.cyhh5bfevlmn.us-east-1.redshift.amazonaws.com
-AWS_REDSHIFT_PORT=5439
-AWS_REDSHIFT_DBNAME=data-engineer-database
-AWS_REDSHIFT_SCHEMA=your-schema
-```
+Docker Compose con Pyspark
+Password o Token del Jupyter Notebook: coder
 
-Y colocarlo en la carpeta `Semana_6/docker_shared_folder/working_dir/`
+URL del Jupyter Notebook: http://localhost:8888/lab?token=coder
